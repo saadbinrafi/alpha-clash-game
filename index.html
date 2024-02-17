@@ -14,21 +14,21 @@
 <body class="min-h-screen bg-slate-900 bg-[url(images/background.png)] bg-no-repeat bg-center">
     <main>
         
-        <div class="flex flex-col items-center">
+        <section id="home-screen" class="flex flex-col items-center">
             <!-- HOME SCREEN  -->
-            <section 
-                class="home hidden min-h-screen text-white flex-col justify-center items-center gap-10">
-                <h1 class="text-8xl uppercase font-bold">Alpha Clash Pro</h1>
-                <p>Unleash Your Keyboard Kun g fu : Press "Enter" to Play  </p>
-                <button class="btn bg-white text-black text-[20px] font-bold">Play Now</button>
-            </section>
+            <div 
+                class=" min-h-screen text-white flex-col justify-center items-center flex gap-10 text-center ">
+                <h1 class="text-7xl uppercase font-bold">Alpha Clash Pro</h1>
+                <p class="text-[20px] font-semibold">Unleash Your Keyboard Kun g fu : Press "Enter" to Play  </p>
+                <button onclick="play()" class="btn bg-white text-black text-[20px] font-bold">Play Now</button>
+            </div>
 
-        </div>
+        </section>
             
             <!-- PLAY GROUND STARTS -->
-        <section class="play-ground">
+        <section id="play-ground" class=" hidden ">
             <div class="flex flex-col items-center gap-16 pt-16">
-                <!-- screen  -->
+                <!--play screen  -->
                 <div 
                     class="artboard                artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313cc] bg-[#FFFFFFB3]">
 
@@ -37,8 +37,8 @@
                     </div>
 
                     <div class="flex justify-center items-center h-full">
-                        <p class="text-9xl font-bold">Y</p>
-                    </div>
+                        <p id="current-alphabet" class="text-9xl font-bold uppercase">Y</p>
+                    </div>z
 
 
                 </div>
@@ -48,40 +48,40 @@
                 <div>
                     
                     <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd class="kbd">q</kbd>
-                        <kbd class="kbd">w</kbd>
-                        <kbd class="kbd">e</kbd>
-                        <kbd class="kbd">r</kbd>
-                        <kbd class="kbd">t</kbd>
-                        <kbd class="kbd">y</kbd>
-                        <kbd class="kbd">u</kbd>
-                        <kbd class="kbd">i</kbd>
-                        <kbd class="kbd">o</kbd>
-                        <kbd class="kbd">p</kbd>
+                        <kbd id="q" class="kbd">q</kbd>
+                        <kbd id="w" class="kbd">w</kbd>
+                        <kbd id="e" class="kbd">e</kbd>
+                        <kbd id="r" class="kbd">r</kbd>
+                        <kbd id="t" class="kbd">t</kbd>
+                        <kbd id="y" class="kbd">y</kbd>
+                        <kbd id="u" class="kbd">u</kbd>
+                        <kbd id="i" class="kbd">i</kbd>
+                        <kbd id="o" class="kbd">o</kbd>
+                        <kbd id="p" class="kbd">p</kbd>
                     </div> 
                     
                     
                     <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd class="kbd">a</kbd>
-                        <kbd class="kbd">s</kbd>
-                        <kbd class="kbd">d</kbd>
-                        <kbd class="kbd">f</kbd>
-                        <kbd class="kbd">g</kbd>
-                        <kbd class="kbd">h</kbd>
-                        <kbd class="kbd">j</kbd>
-                        <kbd class="kbd">k</kbd>
-                        <kbd class="kbd">l</kbd>
+                        <kbd id="a" class="kbd">a</kbd>
+                        <kbd id="s" class="kbd">s</kbd>
+                        <kbd id="d" class="kbd">d</kbd>
+                        <kbd id="f" class="kbd">f</kbd>
+                        <kbd id="g" class="kbd">g</kbd>
+                        <kbd id="h" class="kbd">h</kbd>
+                        <kbd id="j" class="kbd">j</kbd>
+                        <kbd id="k" class="kbd">k</kbd>
+                        <kbd id="l" class="kbd">l</kbd>
                     </div> 
                       
                     <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd class="kbd">z</kbd>
-                        <kbd class="kbd">x</kbd>
-                        <kbd class="kbd">c</kbd>
-                        <kbd class="kbd">v</kbd>
-                        <kbd class="kbd">b</kbd>
-                        <kbd class="kbd">n</kbd>
-                        <kbd class="kbd">m</kbd>
-                        <kbd class="kbd">/</kbd>
+                        <kbd id="z" class="kbd">z</kbd>
+                        <kbd id="x" class="kbd">x</kbd>
+                        <kbd id="c" class="kbd">c</kbd>
+                        <kbd id="v" class="kbd">v</kbd>
+                        <kbd id="b" class="kbd">b</kbd>
+                        <kbd id="n" class="kbd">n</kbd>
+                        <kbd id="m" class="kbd">m</kbd>
+                        <kbd id="/" class="kbd">/</kbd>
                     </div>
 
                 </div>
@@ -121,16 +121,28 @@
 
         </section>
             <!-- PLAY GROUND END -->
+            <!-- final score start  -->
+
         
-        
-        
-        
-        
-        <section class="score">
+        <section class="hidden score flex justify-center items-center min-h-screen">
+
+            <div 
+                class="text-white text-center space-y-6 bg-[#ffffff33] p-5 rounded-lg">
+                <h1 class="text-8xl">
+                    <span class="font-bold">score:</span><span>14</span>
+                </h1>
+                <button class="btn bg-black text-white text-[20px] font-semibold hover:bg-white hover:text-black ">Play Again</button>
+                <p class="text-[20px] font-semibold">Practice will make you a pro</p>
+            </div>
 
         </section>
 
     </main>
+
+
+
+    <script src="scripts/alpha-clash.js"></script>
+    <script src="scripts/utility.js"></script>
 
 </body>
 </html>
