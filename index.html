@@ -10,6 +10,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
 
+    <!-- font awsome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body class="min-h-screen bg-slate-900 bg-[url(images/background.png)] bg-no-repeat bg-center">
     <main>
@@ -90,18 +93,18 @@
                 <div class="flex justify-between w-2/3">
                  <!-- life line  -->
                     <div>
-                        <button class="btn          rounded-full font-bold text-[20px]">
+                        <button class="btn          rounded-full font-bold text-[20px] bg-purple-400">
                         Life
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
-                            <span>1</span>
+                        <i class="fa-solid fa-heart-pulse"></i>
+                            <span id="current-life">5</span>
                         </button>
                     </div>
 
                     <div>
-                        <button class="btn rounded-full font-bold text-[20px]">
+                        <button class="btn rounded-full font-bold text-[20px] bg-pink-300">
                             Score
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
-                            <span>1</span>
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                            <span id="current-score">0</span>
                         </button>
                     </div>
 
@@ -124,14 +127,15 @@
             <!-- final score start  -->
 
         
-        <section class="hidden score flex justify-center items-center min-h-screen">
+        <section id="final-score" class="hidden score flex justify-center items-center min-h-screen">
 
-            <div 
+            <div   
                 class="text-white text-center space-y-6 bg-[#ffffff33] p-5 rounded-lg">
-                <h1 class="text-8xl">
-                    <span class="font-bold">score:</span><span>14</span>
+                <p class="mt-5 text-[20px] font-bold text-green-300">Game Over !</p>
+                <h1 class="text-8xl font-bold">your <br>
+                    <span class="font-bold">score:</span><span id="last-score">14</span>
                 </h1>
-                <button class="btn bg-black text-white text-[20px] font-semibold hover:bg-white hover:text-black ">Play Again</button>
+                <button onclick="play()" class="btn bg-black text-white text-[20px] font-semibold hover:bg-white hover:text-black ">Play Again</button>
                 <p class="text-[20px] font-semibold">Practice will make you a pro</p>
             </div>
 
